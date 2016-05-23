@@ -1,2 +1,2 @@
 # passport-seed
-a seed for a passport node server. By Stephen Brinkworth
+a seed for a passport node server
