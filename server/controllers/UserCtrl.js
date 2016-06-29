@@ -6,14 +6,14 @@ module.exports = {
     User.create(req.body, function(err, result) {
       if(err) return res.status(500).send(err);
       newUser = result.toObject();
-      newUser.password = null;
+      delete newUser.password;
       res.status(200).json(newUser);
     });
   },
 
   me: function(req, res, next) {
     if (!req.user) return res.status(401).send('current user not defined');
-    req.user.password = null;
+    delete newUser.password;
     return res.status(200).json(req.user);
   },
 
